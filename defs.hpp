@@ -8,23 +8,12 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
-struct App{
-	SDL_Renderer *renderer;
-	SDL_Window *window;
-	int up;
-	int down;
-	int left;
-	int right;
-	int fire;
-}app;
+#define MAX_KEYBOARD_KEYS 350
 
-struct Entity{
-	int x;
-	int y;
-	int dx;
-	int dy;
-	int health;
-	SDL_Texture *texture;
-} player,bullet;
+#define PLAYER_SPEED 4
+#define PLAYER_BULLET_SPEED 16
+
+#define ENEMY_SPEED -(2 + (rand() % 4))
+#define ENEMY_BULLET_SPEED 9
 
 #endif

@@ -2,8 +2,11 @@
 #define _INIT_H_
 
 #include"defs.hpp"
+#include"structs.hpp"
 #include"init.cpp"
-
+#include"draw.cpp"
+#include"input.cpp"
+#include"stage.cpp"
 
 void initSDL(void);
 void doInput(void);
