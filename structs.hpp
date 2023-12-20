@@ -1,5 +1,4 @@
-#ifndef _STRUCTS_HPP_
-#define _STRUCTS_HPP_
+#pragma once
 
 #include"init.hpp"
 
@@ -12,6 +11,7 @@ struct Entity{
 	float dy;
 	int health;
 	int reload;
+	int side;
 	SDL_Texture *texture;
 	Entity *next;
 } player,bullet,enemy;
@@ -33,4 +33,3 @@ struct App{
 }app;
 
 int enemySpawnTimer;
-#endif

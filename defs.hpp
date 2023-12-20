@@ -1,5 +1,4 @@
-#ifndef _DEFS_H_
-#define _DEFS_H_
+#pragma once
 
 #include<bits/stdc++.h>
 #include<SDL2/SDL.h>
@@ -15,5 +14,7 @@
 
 #define ENEMY_SPEED -(2 + (rand() % 4))
 #define ENEMY_BULLET_SPEED 9
+#define ENEMY_HEALTH 4
 
-#endif
+#define SIDE_PLAYER 0
+#define SIDE_ENEMY 1
