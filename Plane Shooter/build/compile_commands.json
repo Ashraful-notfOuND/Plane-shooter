@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/background.c.o -c /home/nanden/Desktop/Scratch/src/background.c",
+  "file": "/home/nanden/Desktop/Scratch/src/background.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/draw.c.o -c /home/nanden/Desktop/Scratch/src/draw.c",
+  "file": "/home/nanden/Desktop/Scratch/src/draw.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/highscores.c.o -c /home/nanden/Desktop/Scratch/src/highscores.c",
+  "file": "/home/nanden/Desktop/Scratch/src/highscores.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/init.c.o -c /home/nanden/Desktop/Scratch/src/init.c",
+  "file": "/home/nanden/Desktop/Scratch/src/init.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/input.c.o -c /home/nanden/Desktop/Scratch/src/input.c",
+  "file": "/home/nanden/Desktop/Scratch/src/input.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/main.c.o -c /home/nanden/Desktop/Scratch/src/main.c",
+  "file": "/home/nanden/Desktop/Scratch/src/main.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/sound.c.o -c /home/nanden/Desktop/Scratch/src/sound.c",
+  "file": "/home/nanden/Desktop/Scratch/src/sound.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/stage.c.o -c /home/nanden/Desktop/Scratch/src/stage.c",
+  "file": "/home/nanden/Desktop/Scratch/src/stage.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/text.c.o -c /home/nanden/Desktop/Scratch/src/text.c",
+  "file": "/home/nanden/Desktop/Scratch/src/text.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/title.c.o -c /home/nanden/Desktop/Scratch/src/title.c",
+  "file": "/home/nanden/Desktop/Scratch/src/title.c"
+},
+{
+  "directory": "/home/nanden/Desktop/Scratch/build",
+  "command": "/usr/bin/gcc  -I/usr/include/SDL2 -g -Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g -o CMakeFiles/shooter15.dir/src/util.c.o -c /home/nanden/Desktop/Scratch/src/util.c",
+  "file": "/home/nanden/Desktop/Scratch/src/util.c"
+}
+]
