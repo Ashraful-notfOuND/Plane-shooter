@@ -1,7 +1,7 @@
 #pragma once
 
+#include <fstream>
 #include "common.hpp"
-
 #include "background.hpp"
 #include "highscores.hpp"
 #include "stage.hpp"
@@ -11,17 +11,20 @@
 extern App        app;
 extern Highscores highscores;
 
-static void logic(void);
-static void draw(void);
-static int  highscoreComparator(const void *a, const void *b);
-static void drawHighscores(void);
-static void doNameInput(void);
-static void drawNameInput(void);
-
 static Highscore *newHighscore;
 static int        cursorBlink;
 static int        timeout;
 
+void loadHighscores() {
+    std::ifstream file("src/highscores.txt");
+    if (file.is_open()) {
+        // Read high scores from file and store them in the highscores array
+        for (int i = 0; i < NUM_HIGHSCORES; ++i) {
+            file >> highscores.highscore[i].name >> highscores.highscore[i].score;
+        }
+        file.close();
+    }
+}
 void initHighscoreTable(void)
 {
 	int i;
@@ -30,13 +33,14 @@ void initHighscoreTable(void)
 
 	for (i = 0; i < NUM_HIGHSCORES; i++)
 	{
-		highscores.highscore[i].score = NUM_HIGHSCORES - i;
+		highscores.highscore[i].score = 0;
 		STRNCPY(highscores.highscore[i].name, "ANONYMOUS", MAX_SCORE_NAME_LENGTH);
 	}
 
 	newHighscore = NULL;
 
 	cursorBlink = 0;
+	loadHighscores();
 }
 
 void initHighscores(void)
@@ -46,7 +50,7 @@ void initHighscores(void)
 
 	memset(app.keyboard, 0, sizeof(int) * MAX_KEYBOARD_KEYS);
 
-	timeout = FPS * 5;
+	timeout = FPS*100;
 }
 
 static void logic(void)
@@ -108,6 +112,7 @@ static void doNameInput(void)
 		{
 			STRNCPY(newHighscore->name, "ANONYMOUS", MAX_SCORE_NAME_LENGTH);
 		}
+		saveHighscores();
 
 		newHighscore = NULL;
 	}
@@ -129,7 +134,7 @@ static void draw(void)
 
 		if (timeout % 40 < 20)
 		{
-			drawText(SCREEN_WIDTH / 2, 600, 255, 255, 255, TEXT_CENTER, "PRESS FIRE TO PLAY!");
+			drawText(SCREEN_WIDTH / 2, 600, 255, 255, 255, TEXT_CENTER, "PRESS LCTRL TO PLAY!");
 		}
 	}
 }
@@ -164,7 +169,7 @@ static void drawHighscores(void)
 
 	y = 150;
 
-	drawText(SCREEN_WIDTH / 2, 70, 255, 255, 255, TEXT_CENTER, "HIGHSCORES");
+	drawText(SCREEN_WIDTH / 2, 70, 255, 255, 255, TEXT_CENTER, "LEADERBOARD");
 
 	for (i = 0; i < NUM_HIGHSCORES; i++)
 	{
@@ -177,12 +182,21 @@ static void drawHighscores(void)
 			b = 0;
 		}
 
-		drawText(SCREEN_WIDTH / 2, y, r, g, b, TEXT_CENTER, "#%d. %-15s ...... %03d", (i + 1), highscores.highscore[i].name, highscores.highscore[i].score);
+		drawText(SCREEN_WIDTH / 2, y, r, g, b, TEXT_CENTER, "#%d. %-15s ...... %02d", (i + 1), highscores.highscore[i].name, highscores.highscore[i].score);
 
 		y += 50;
 	}
 }
-
+void saveHighscores() {
+    std::ofstream file("src/highscores.txt");
+    if (file.is_open()) {
+        // Write high scores from the highscores array to the file
+        for (int i = 0; i < NUM_HIGHSCORES; ++i) {
+            file << highscores.highscore[i].name << " " << highscores.highscore[i].score<<std::endl;
+        }
+        file.close();
+    }
+}
 void addHighscore(int score)
 {
 	Highscore newHighscores[NUM_HIGHSCORES + 1];
@@ -212,8 +226,8 @@ void addHighscore(int score)
 			newHighscore = &highscores.highscore[i];
 		}
 	}
+	saveHighscores();
 }
-
 static int highscoreComparator(const void *a, const void *b)
 {
 	Highscore *h1 = ((Highscore *)a);

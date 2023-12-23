@@ -26,8 +26,8 @@ void initTitle(void)
 
 	memset(app.keyboard, 0, sizeof(int) * MAX_KEYBOARD_KEYS);
 
-	sdl2Texture = loadTexture("gfx/sdl2.png");
-	shooterTexture = loadTexture("gfx/shooter.png");
+	sdl2Texture = loadTexture("gfx/planetxt.png");
+	shooterTexture = loadTexture("gfx/shootertxt.png");
 
 	timeout = FPS * 5;
 }
