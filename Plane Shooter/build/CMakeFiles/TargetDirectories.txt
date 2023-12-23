@@ -1,3 +1,0 @@
-/home/nanden/Desktop/Scratch/build/CMakeFiles/shooter15.dir
-/home/nanden/Desktop/Scratch/build/CMakeFiles/edit_cache.dir
-/home/nanden/Desktop/Scratch/build/CMakeFiles/rebuild_cache.dir
